@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
 import { HeroUIProvider } from "@heroui/react";
 import Header from "@/components/header/header";
+import { ThemeProvider } from "@/context/themeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,15 +26,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="light">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <HeroUIProvider>
-          <Header />
-          <main className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-purple-100">
-            {children}
-          </main>
+          <ThemeProvider>
+            <Header />
+            <main className="min-h-screen bg-gradient-to-br">{children}</main>
+          </ThemeProvider>
         </HeroUIProvider>
       </body>
     </html>

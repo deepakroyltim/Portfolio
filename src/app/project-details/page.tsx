@@ -6,7 +6,7 @@ export default function ProjectDetails() {
     title: "Creative Portfolio",
     description:
       "A sleek and modern portfolio site built with Next.js, Tailwind CSS, and Hero UI. It features smooth transitions, dark mode, and a CMS-powered blog.",
-    image: "/projects/creative-portfolio.jpg",
+    image: "/project4.jpg",
     tech: ["Next.js", "Tailwind CSS", "Hero UI", "TypeScript", "Sanity CMS"],
     github: "https://github.com/yourusername/creative-portfolio",
     live: "https://yourportfolio.com",
@@ -20,7 +20,8 @@ export default function ProjectDetails() {
           <Image
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-300"
+            isBlurred
           />
         </div>
 

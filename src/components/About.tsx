@@ -1,4 +1,4 @@
-import { Image } from "@heroui/react";
+import { Button, Image, Link } from "@heroui/react";
 
 export default function About() {
   return (
@@ -13,23 +13,20 @@ export default function About() {
           />
         </div>
         <div className="md:w-1/2 text-center md:text-left">
-          <h2 className="text-4xl font-extrabold text-gray-900 mb-6">
+          <h2 className="text-4xl font-extrabold mb-6">
             Hi, I&apos;m a Web Developer
           </h2>
 
-          <p className="text-gray-700 text-lg leading-relaxed mb-6">
+          <p className=" text-lg leading-relaxed mb-6">
             I specialize in crafting responsive, accessible, and visually
             engaging web applications. With a passion for clean code and modern
             design, I work with tools like <strong>React</strong>,{" "}
             <strong>Next.js</strong>, and <strong>Tailwind CSS</strong> to bring
             ideas to life.
           </p>
-          <a
-            href="#contact"
-            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition-colors duration-300"
-          >
-            Let’s Connect
-          </a>
+          <Button as={Link} color="primary" href="#contact" size="lg">
+            Lets Connet
+          </Button>
         </div>
       </div>
     </section>

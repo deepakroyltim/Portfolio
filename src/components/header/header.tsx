@@ -1,24 +1,43 @@
+"use client";
 import {
   Link,
   Navbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem,
+  Tooltip,
 } from "@heroui/react";
-
+import { useState } from "react";
+import { useTheme } from "@/context/themeContext";
 import { FaRegSun, FaRegMoon } from "react-icons/fa6";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <Navbar
       isBordered
       isBlurred
-      className="sticky top-0 z-50 bg-white/80 backdrop-blur-md"
+      className="sticky top-0 z-50 backdrop-blur-md"
+      onMenuOpenChange={setIsMenuOpen}
     >
-      <NavbarBrand>
-        <span className="font-bold text-xl">Deepak Roy</span>
-      </NavbarBrand>
-      <NavbarContent justify="end">
+      <NavbarContent>
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="sm:hidden"
+        />
+        <NavbarBrand>
+          <Link href="/" color="foreground" className="font-bold text-2xl">
+            Deepak Roy
+          </Link>
+        </NavbarBrand>
+      </NavbarContent>
+
+      <NavbarContent className="hidden sm:flex gap-4" justify="end">
         <NavbarItem>
           <Link color="foreground" href="/#about">
             About
@@ -44,12 +63,47 @@ const Header = () => {
             Blog
           </Link>
         </NavbarItem>
+      </NavbarContent>
+      <NavbarContent justify="end">
         <NavbarItem>
-          <Link color="primary">
-            <FaRegSun className="w-5 h-5" /> <FaRegMoon className="w-5 h-5" />
-          </Link>
+          <Tooltip content="Toggle Theme" placement="bottom">
+            <Link color="primary" onPress={toggleTheme}>
+              {theme == "light" ? (
+                <FaRegMoon className="w-6 h-6" />
+              ) : (
+                <FaRegSun className="w-6 h-6" />
+              )}
+            </Link>
+          </Tooltip>
         </NavbarItem>
       </NavbarContent>
+      <NavbarMenu>
+        <NavbarMenuItem>
+          <Link className="w-full" color="foreground" href="#" size="lg">
+            About
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link className="w-full" color="foreground" href="#" size="lg">
+            Projects
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link color="foreground" href="/#skills">
+            Skills
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link color="foreground" href="/#contact">
+            Contact
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link color="foreground" href="/Blog">
+            Blog
+          </Link>
+        </NavbarMenuItem>
+      </NavbarMenu>
     </Navbar>
   );
 };

@@ -1,34 +1,38 @@
+import { Button, Input, Textarea } from "@heroui/react";
+import Link from "next/link";
+
 export default function Contact() {
   return (
     <section id="contact" className="py-20 px-6">
       <h2 className="text-3xl font-bold text-center mb-12">Contact Me</h2>
-      <form className="max-w-xl mx-auto space-y-6">
-        <input
+      <form className="w-full justify-center items-center space-y-4 m-auto max-w-2xl">
+        <Input
           type="text"
-          placeholder="Your Name"
-          className="w-full px-4 py-3 border rounded-lg"
+          label="Your Name"
+          placeholder="Enter your name"
+          size="lg"
+          isRequired
+          errorMessage="Name is required"
         />
-        <input
+        <Input
           type="email"
-          placeholder="Your Email"
-          className="w-full px-4 py-3 border rounded-lg"
+          label="Your Email"
+          placeholder="Enter your Email"
+          size="lg"
+          isRequired
+          errorMessage="Email is required"
         />
-        <textarea
+        <Textarea
+          label="Message (optional)"
           placeholder="Your Message"
-          className="w-full px-4 py-3 border rounded-lg h-32"
+          size="lg"
         />
-        <button
-          type="submit"
-          className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
-        >
+        <Button type="submit" color="primary" size="lg" className="w-full">
           Send Message
-        </button>
+        </Button>
       </form>
-      <div className="mt-8 text-center text-gray-600">
-        Or reach out via{" "}
-        <a href="mailto:you@example.com" className="text-blue-600 underline">
-          email
-        </a>
+      <div className="mt-8 text-center">
+        Or reach out via <Link href="mailto:you@example.com">email</Link>
       </div>
     </section>
   );

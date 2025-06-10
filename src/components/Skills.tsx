@@ -1,5 +1,6 @@
 import { FaReact, FaJs, FaFigma } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { Card, CardBody } from "@heroui/react";
 
 export default function Skills() {
   const skills = [
@@ -18,13 +19,15 @@ export default function Skills() {
       </h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
         {skills.map((skill) => (
-          <div
+          <Card
             key={skill.name}
-            className="flex flex-col items-center justify-center bg-white p-6 rounded-xl shadow hover:shadow-lg transition"
+            className="text-center hover:shadow-lg transition-transform duration-300 group-hover:scale-110 hover:scale-110"
           >
-            <div className="text-4xl mb-3">{skill.icon}</div>
-            <span className="text-gray-800 font-medium">{skill.name}</span>
-          </div>
+            <CardBody className="flex flex-col items-center justify-center">
+              <div className="text-4xl mb-3 ">{skill.icon}</div>
+              <span className="font-medium">{skill.name}</span>
+            </CardBody>
+          </Card>
         ))}
       </div>
     </section>
