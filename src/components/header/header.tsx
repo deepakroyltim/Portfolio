@@ -59,7 +59,7 @@ const Header = () => {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="/Blog">
+          <Link color="foreground" href="/blog">
             Blog
           </Link>
         </NavbarItem>
@@ -99,7 +99,7 @@ const Header = () => {
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link color="foreground" href="/Blog">
+          <Link color="foreground" href="/blog">
             Blog
           </Link>
         </NavbarMenuItem>
