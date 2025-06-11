@@ -146,7 +146,7 @@ const BlogSingle = () => {
               <Image
                 src={`${post.image}`}
                 alt="Similar post image"
-                className="w-full object-cover object-center h-fit"
+                className="w-full object-cover object-center h-36"
               />
             </CardHeader>
             <CardBody>

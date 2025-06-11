@@ -1,6 +1,7 @@
 "use client";
 
 import { Image, Link, Chip, Divider, Pagination } from "@heroui/react";
+// import NextImage from "next/image";
 
 const blogPosts = [
   {
@@ -99,7 +100,11 @@ export default function BlogPage() {
                   <Image
                     src={post.image}
                     alt={post.title}
-                    className="w-full h-48 object-cover rounded-md hover:scale-110"
+                    width={300}
+                    height={200}
+                    // fallbackSrc="/fallback-image-300x200.png"
+                    isZoomed
+                    className="w-full h-48 object-cover rounded-md"
                   />
                 </div>
 

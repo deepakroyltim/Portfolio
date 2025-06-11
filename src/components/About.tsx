@@ -21,8 +21,13 @@ export default function About() {
             I specialize in crafting responsive, accessible, and visually
             engaging web applications. With a passion for clean code and modern
             design, I work with tools like <strong>React</strong>,{" "}
-            <strong>Next.js</strong>, and <strong>Tailwind CSS</strong> to bring
-            ideas to life.
+            <strong>Next.js</strong>, <strong>Bootstrap</strong>, and{" "}
+            <strong>Tailwind CSS</strong> to bring ideas to life. My skill set
+            also includes backend development with{" "}
+            <strong>Node.js & Express</strong>, scripting and automation using{" "}
+            <strong>Python</strong>, content management with{" "}
+            <strong>WordPress</strong>, and optimizing websites for search
+            engines through effective SEO strategies.
           </p>
           <Button as={Link} color="primary" href="#contact" size="lg">
             Lets Connet
