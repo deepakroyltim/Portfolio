@@ -34,8 +34,10 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
+# Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
 # portfolio
-A portfolio front end build on nextjs
->>>>>>> cdd18836f98d6af4dcd364584da4956326216e15
+
+A modern and responsive portfolio frontend built with [Next.js], [Hero UI] and [Tailwind CSS]. This project showcases personal blog posts, featured projects, and developer tools in a clean, performant layout. It includes dynamic routing, optimized image handling, and a theme toggle for dark/light mode. Ideal for developers looking to present their work and writing in a professional and elegant way.
+
+> > > > > > > cdd18836f98d6af4dcd364584da4956326216e15
