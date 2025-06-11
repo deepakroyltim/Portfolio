@@ -8,8 +8,10 @@ const blogPosts = [
     title: "My First Blog Post",
     description:
       "Welcome to my blog! In this first post, I share my motivations for starting this journey, what kind of content you can expect, and how I plan to grow as a developer through writing. Whether you're a beginner or a seasoned coder, I hope to provide value and inspiration through my experiences and insights.",
+    summary:
+      "An introductory post outlining the author's goals and vision for the blog.",
     date: "June 10, 2025",
-    image: "https://picsum.photos/1120/400",
+    image: "https://picsum.photos/1120/400?random=1",
     category: "Personal",
     tags: ["introduction", "goals", "developer journey"],
     author: "Alex Johnson",
@@ -19,8 +21,10 @@ const blogPosts = [
     title: "How to Add Theme Toggle in Next.js",
     description:
       "This comprehensive guide walks you through implementing a dark/light theme toggle in a Next.js application using the Context API. You'll learn how to integrate Tailwind CSS's dark mode, manage theme state globally, and persist user preferences using localStorage. Perfect for developers looking to enhance UX with modern UI features.",
+    summary:
+      "Learn to implement a dark/light theme toggle in Next.js using Context API and Tailwind.",
     date: "June 5, 2025",
-    image: "https://picsum.photos/1120/400",
+    image: "https://picsum.photos/1120/400?random=2",
     category: "Frontend",
     tags: ["nextjs", "dark mode", "context api", "tailwind"],
     author: "Emily Carter",
@@ -30,8 +34,10 @@ const blogPosts = [
     title: "Tailwind CSS vs Traditional CSS: Which Should You Use?",
     description:
       "In this post, we compare Tailwind CSS, a utility-first framework, with traditional CSS approaches. We explore their differences in terms of maintainability, scalability, performance, and developer experience. Whether you're building a small project or a large-scale application, this guide will help you choose the right styling strategy.",
+    summary:
+      "A comparison of Tailwind CSS and traditional CSS for styling web applications.",
     date: "May 28, 2025",
-    image: "https://picsum.photos/1120/400",
+    image: "https://picsum.photos/1120/400?random=3",
     category: "CSS",
     tags: ["tailwind", "css", "frontend", "design systems"],
     author: "Jordan Lee",
@@ -41,8 +47,10 @@ const blogPosts = [
     title: "How to Deploy a Next.js App to Vercel",
     description:
       "Deploying your Next.js app to Vercel is easier than you think. This tutorial covers everything from connecting your GitHub repository to configuring environment variables and optimizing your deployment for production. Learn best practices for CI/CD and how to troubleshoot common deployment issues.",
+    summary:
+      "Step-by-step guide to deploying a Next.js app to Vercel with GitHub integration.",
     date: "May 20, 2025",
-    image: "https://picsum.photos/1120/400",
+    image: "https://picsum.photos/1120/400?random=4",
     category: "DevOps",
     tags: ["nextjs", "vercel", "deployment", "ci/cd"],
     author: "Samantha Nguyen",
@@ -52,8 +60,10 @@ const blogPosts = [
     title: "Top 10 Tools Every Productive Developer Uses",
     description:
       "Discover the top 10 tools that can significantly boost your productivity as a developer. From powerful code editors and terminal tools to browser extensions and task managers, this list includes both free and premium options that streamline your workflow and help you stay focused and efficient.",
+    summary:
+      "A curated list of essential tools to enhance developer productivity and workflow.",
     date: "May 10, 2025",
-    image: "https://picsum.photos/1120/400",
+    image: "https://picsum.photos/1120/400?random=5",
     category: "Productivity",
     tags: ["tools", "productivity", "developer life", "workflow"],
     author: "Chris Martinez",
@@ -63,8 +73,10 @@ const blogPosts = [
     title: "Mastering JavaScript Array Methods",
     description:
       "JavaScript arrays are incredibly powerful, and mastering their methods can take your coding skills to the next level. This post dives deep into methods like `map`, `filter`, `reduce`, and more, with practical examples and performance tips to help you write cleaner, more efficient, and more readable code.",
+    summary:
+      "An in-depth look at JavaScript array methods with examples and performance tips.",
     date: "April 30, 2025",
-    image: "https://picsum.photos/1120/400",
+    image: "https://picsum.photos/1120/400?random=6",
     category: "JavaScript",
     tags: ["javascript", "arrays", "coding tips", "functional programming"],
     author: "Ravi Patel",
@@ -73,7 +85,7 @@ const blogPosts = [
 
 export default function BlogPage() {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-8">
+    <section className="max-w-6xl mx-auto px-4 py-8">
       <h1 className="text-4xl font-bold mb-12 text-center">Blog</h1>
 
       <div className="flex flex-col lg:flex-row gap-4">
@@ -103,15 +115,17 @@ export default function BlogPage() {
                   </h2>
                   <p className="text-sm text-gray-500 mb-2">{post.date}</p>
                   <div className="my-2">
-                    <Chip>Chip</Chip>
+                    <Chip color="primary" variant="flat">
+                      Chip
+                    </Chip>
                   </div>
 
-                  <p className="text-gray-700 dark:text-gray-300 mb-2">
-                    {post.description}
+                  <p className="text-gray-700 dark:text-gray-300 my-2">
+                    {post.summary}
                   </p>
                   <div className="flex flex-wrap my-2 gap-2">
                     {post.tags.map((tag) => (
-                      <Chip key={tag} color="warning">
+                      <Chip key={tag} color="default" variant="flat">
                         {tag}
                       </Chip>
                     ))}
@@ -136,23 +150,23 @@ export default function BlogPage() {
         <div className="hidden lg:block w-px bg-gray-300 dark:bg-gray-700" />
 
         {/* Sidebar */}
-        <aside className="w-full lg:w-1/4 space-y-8">
+        <aside className="w-full lg:w-1/5 space-y-8">
           <div>
             <h3 className="text-lg font-semibold mb-2">Categories</h3>
             <div className="flex flex-wrap gap-2">
-              <Chip>Productivity</Chip>
-              <Chip>Web Development</Chip>
-              <Chip>Design</Chip>
+              <Chip variant="bordered">Productivity</Chip>
+              <Chip variant="bordered">Web Development</Chip>
+              <Chip variant="bordered">Design</Chip>
             </div>
             <Divider className="my-4" />
             <div>
               <h3 className="text-lg font-semibold mb-2">Tag Cloud</h3>
               <div className="flex flex-wrap gap-2">
-                <Chip>Git</Chip>
-                <Chip>AWS</Chip>
-                <Chip>React</Chip>
-                <Chip>Javscript</Chip>
-                <Chip>Pathon</Chip>
+                <Chip variant="bordered">Git</Chip>
+                <Chip variant="bordered">AWS</Chip>
+                <Chip variant="bordered">React</Chip>
+                <Chip variant="bordered">Javscript</Chip>
+                <Chip variant="bordered">Pathon</Chip>
               </div>
             </div>
           </div>
