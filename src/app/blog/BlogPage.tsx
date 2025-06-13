@@ -85,7 +85,7 @@ export default function BlogPage() {
             posts.map((post) => (
               <div key={post.slug}>
                 <Post post={post} />
-                <Divider />
+                <Divider className="mt-8" />
               </div>
             ))
           )}
