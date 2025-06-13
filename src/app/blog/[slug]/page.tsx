@@ -12,7 +12,7 @@ import {
 import Markdown from "react-markdown";
 
 import { useParams } from "next/navigation";
-import type { PostProps } from "@/app/blog/page";
+import type { PostProps } from "@/app/blog/BlogPage";
 
 import { useEffect, useState } from "react";
 import PostDetailSkelton from "@/components/common/PostDetailSkelton";
@@ -62,7 +62,7 @@ const BlogSingle = () => {
             <div className="relative z-10 text-center text-white px-4">
               <h1 className="text-4xl font-bold">{post?.title}</h1>
               <div className="mt-5">
-                <Link href="#">
+                <Link href={`/blog?category=${post?.category}`}>
                   <Chip
                     key={post?.category}
                     variant="bordered"
@@ -77,7 +77,7 @@ const BlogSingle = () => {
               <Divider className="my-5" />
               <div className="mt-2 text-lg">
                 {post?.tags.map((tag) => (
-                  <Link href="#" key={tag}>
+                  <Link href={`/blog/?tag=${tag}`} key={tag}>
                     <Chip className="ml-1" variant="solid" color="primary">
                       {tag}
                     </Chip>
@@ -91,10 +91,8 @@ const BlogSingle = () => {
             <h1 className="text-3xl font-bold">{post?.title}</h1>
             <p className="text-gray-600 mt-2">
               By{" "}
-              <Link href="#" className="font-semibold">
-                {post?.author}
-              </Link>
-              , {post?.date}
+              <Link href={`/blog?author=${post?.author}`}>{post?.author}</Link>,{" "}
+              {post?.date}
             </p>
 
             <div className="mt-6 prose prose-lg max-w-none">
@@ -138,7 +136,7 @@ const BlogSingle = () => {
                       {/* <div className="my-4">{post?.summary}</div> */}
                       <div className="my-2 space-y-2 space-x-2">
                         {post?.tags.map((tag) => (
-                          <Link href="#" key={tag}>
+                          <Link href={`/blog/?tag=${tag}`} key={tag}>
                             <Chip color="default" variant="flat">
                               {tag}
                             </Chip>
