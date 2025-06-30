@@ -1,4 +1,4 @@
-# portfolio
+# Portfolio (NextJS App)
 
 A modern, responsive portfolio frontend built with Next.js, [Hero UI], and [Tailwind CSS]. This project elegantly showcases personal blog posts, featured projects, and developer tools in a clean and performant layout. It includes dynamic routing, optimized image handling, and a theme toggle for dark/light mode—perfect for developers who want to present their work and writing with style and clarity.
 
