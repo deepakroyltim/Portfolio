@@ -1,5 +1,10 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# portfolio
+
+A modern, responsive portfolio frontend built with Next.js, [Hero UI], and [Tailwind CSS]. This project elegantly showcases personal blog posts, featured projects, and developer tools in a clean and performant layout. It includes dynamic routing, optimized image handling, and a theme toggle for dark/light mode—perfect for developers who want to present their work and writing with style and clarity.
+
+The backend is powered by Prisma, a robust ORM, and PostgreSQL as the database, ensuring efficient data management and scalability.
+
+This project was bootstrapped using create-next-app.
 
 ## Getting Started
 
@@ -36,8 +41,3 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 # Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-# portfolio
-
-A modern and responsive portfolio frontend built with [Next.js], [Hero UI] and [Tailwind CSS]. This project showcases personal blog posts, featured projects, and developer tools in a clean, performant layout. It includes dynamic routing, optimized image handling, and a theme toggle for dark/light mode. Ideal for developers looking to present their work and writing in a professional and elegant way.
-
-> > > > > > > cdd18836f98d6af4dcd364584da4956326216e15
